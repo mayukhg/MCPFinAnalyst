@@ -1,0 +1,23 @@
+llm:
+  model: gpt-4o
+  temperature: 0.1
+  max_tokens: 2000
+  api_key_env: OPENAI_API_KEY
+
+embeddings:
+  model: text-embedding-3-large
+  api_key_env: OPENAI_API_KEY
+
+vector_store:
+  type: chromadb
+  path: ./vector_db
+  collection_name: documents
+
+chunking:
+  chunk_size: 1000
+  chunk_overlap: 200
+  semantic_chunking: true
+
+retrieval:
+  top_k: 5
+  similarity_threshold: 0.7

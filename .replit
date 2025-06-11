@@ -22,7 +22,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "python main.py --help"
+args = "python src/cli.py --help"
 
 [deployment]
 run = ["sh", "-c", "python main.py --help"]
